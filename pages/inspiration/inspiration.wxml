@@ -1,0 +1,39 @@
+<view class="inspiration-container">
+  <!-- 搜索框 -->
+  <view class="search-section">
+    <view class="search-box">
+      <image src="../../images/search.png" class="search-icon"></image>
+      <input placeholder="搜索灵感分类" class="search-input"></input>
+    </view>
+  </view>
+
+  <!-- 分类内容 -->
+  <view class="content-section">
+    <!-- 左侧分类页签 -->
+    <view class="category-tabs">
+      <view class="tab-item {{activeTab === 'style' ? 'active' : ''}}" bindtap="switchTab" data-tab="style">
+        <text>风格分类</text>
+      </view>
+      <view class="tab-item {{activeTab === 'space' ? 'active' : ''}}" bindtap="switchTab" data-tab="space">
+        <text>空间分类</text>
+      </view>
+      <view class="tab-item {{activeTab === 'design' ? 'active' : ''}}" bindtap="switchTab" data-tab="design">
+        <text>设计分类</text>
+      </view>
+      <view class="tab-item {{activeTab === 'video' ? 'active' : ''}}" bindtap="switchTab" data-tab="video">
+        <text>视频分类</text>
+      </view>
+    </view>
+
+    <!-- 右侧效果图展示 -->
+    <view class="effect-section">
+      <view class="effect-grid">
+        <block wx:for="{{effectImages}}" wx:key="index">
+          <view class="effect-item">
+            <image src="{{item.url}}" class="effect-image"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

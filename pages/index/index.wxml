@@ -1,0 +1,55 @@
+<view class="index-container">
+  <!-- 上部分：头部图 -->
+  <view class="header-section">
+    <image src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20AI%20interior%20design%20banner&image_size=landscape_16_9" class="header-image"></image>
+    <view class="header-text">AI空间搭配方案</view>
+  </view>
+
+  <!-- 中部分：功能按钮 -->
+  <view class="function-section">
+    <view class="function-grid">
+      <view class="function-item" bindtap="multiImageMerge">
+        <view class="function-icon">多图融合</view>
+      </view>
+      <view class="function-item" bindtap="imageToImage">
+        <view class="function-icon">图生图</view>
+      </view>
+      <view class="function-item" bindtap="textToImage">
+        <view class="function-icon">文生图</view>
+      </view>
+      <view class="function-item" bindtap="imageToVideo">
+        <view class="function-icon">图生视频</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下部分：推荐内容 -->
+  <view class="recommend-section">
+    <!-- 页签 -->
+    <view class="recommend-tabs">
+      <view class="tab-item {{activeTab === 'hot' ? 'active' : ''}}" bindtap="switchRecommendTab" data-tab="hot">
+        <text>热门推荐</text>
+      </view>
+      <view class="tab-item {{activeTab === 'new' ? 'active' : ''}}" bindtap="switchRecommendTab" data-tab="new">
+        <text>最新发布</text>
+      </view>
+      <view class="tab-item {{activeTab === 'today' ? 'active' : ''}}" bindtap="switchRecommendTab" data-tab="today">
+        <text>今日推荐</text>
+      </view>
+    </view>
+
+    <!-- 推荐内容 -->
+    <view class="recommend-content">
+      <view class="recommend-grid">
+        <block wx:for="{{recommendItems}}" wx:key="index">
+          <view class="recommend-item">
+            <image src="{{item.url}}" class="recommend-image"></image>
+            <view class="favorite-btn" bindtap="toggleFavorite" data-index="{{index}}">
+              <image src="{{item.favorite ? '../../images/heart-active.png' : '../../images/heart.png'}}" class="favorite-icon"></image>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

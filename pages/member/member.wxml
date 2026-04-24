@@ -1,0 +1,91 @@
+<view class="member-container">
+  <view class="member-header">
+    <text class="member-title">会员套餐</text>
+    <text class="member-subtitle">选择适合您的会员方案</text>
+  </view>
+
+  <view class="package-section">
+    <!-- 三年会员 -->
+    <view class="package-item three-year">
+      <view class="package-header">
+        <text class="package-name">三年会员</text>
+        <text class="package-discount">最优惠</text>
+      </view>
+      <view class="package-price">
+        <text class="price">¥1699</text>
+        <text class="price-unit">/3年</text>
+      </view>
+      <view class="package-features">
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">无限次AI生成</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">高清效果图下载</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">优先渲染</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">专属客服</text>
+        </view>
+      </view>
+      <button class="package-btn" bindtap="buyThreeYear">立即购买</button>
+    </view>
+
+    <!-- 年度会员 -->
+    <view class="package-item annual">
+      <view class="package-header">
+        <text class="package-name">年度会员</text>
+      </view>
+      <view class="package-price">
+        <text class="price">¥699</text>
+        <text class="price-unit">/年</text>
+      </view>
+      <view class="package-features">
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">无限次AI生成</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">高清效果图下载</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">优先渲染</text>
+        </view>
+      </view>
+      <button class="package-btn" bindtap="buyAnnual">立即购买</button>
+    </view>
+
+    <!-- 月度会员 -->
+    <view class="package-item monthly">
+      <view class="package-header">
+        <text class="package-name">月度会员</text>
+      </view>
+      <view class="package-price">
+        <text class="price">¥69</text>
+        <text class="price-unit">/月</text>
+      </view>
+      <view class="package-features">
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">50次AI生成</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-check">✓</text>
+          <text class="feature-text">高清效果图下载</text>
+        </view>
+      </view>
+      <button class="package-btn" bindtap="buyMonthly">立即购买</button>
+    </view>
+  </view>
+
+  <view class="member-footer">
+    <text class="footer-text">购买会员即表示同意《会员服务协议》</text>
+  </view>
+</view>
